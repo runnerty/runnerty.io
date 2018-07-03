@@ -41,7 +41,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppService } from './app.service';
 
 import { CookieService } from 'angular2-cookie/services/cookies.service';
-import { NgcCookieConsentModule } from 'ngx-cookieconsent';
+/* import { NgcCookieConsentModule } from 'ngx-cookieconsent'; */
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -100,7 +100,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    NgcCookieConsentModule.forRoot({
+    /* NgcCookieConsentModule.forRoot({
       "cookie": {
         "domain": "localhost"
       },
@@ -125,7 +125,7 @@ import { FooterComponent } from './components/footer/footer.component';
         "link": "Learn more",
         "href": "http://runnerty.io/cookies?"
       }
-    })
+    }) */
   ],
   providers: [
     AppService,
