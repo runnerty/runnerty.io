@@ -1,0 +1,128 @@
+@import '../../../variables'
+\:host
+  display: block
+  color: #FFFFFF
+  background-color: #202930
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  background-image: url('/assets/header/bg.jpg')
+  nav
+    mat-toolbar
+      width: 100%
+      top: 0
+      left: 0
+      transition: 0.5s
+      padding: 0 100px
+      font-family: 'Roboto', sans-serif
+      color: #FFFFFF
+      background-color: transparent
+      min-height: 150px
+      @media #{$break-lt-md}
+        min-height: 100px
+        padding: 0 24px
+    .open-menu
+      display: none
+      font-size: 18px
+      @media #{$break-lt-md}
+        display: inline-block
+    h1
+      font-family: 'Lato', sans-serif
+      font-weight: 300
+      font-size: 40px
+      color: #7ED3B0
+      padding: 3px 0 0 6px
+    .menu
+      padding-top: 5px
+      text-align: center
+      font-weight: 300
+      @media #{$break-lt-md}
+        display: none
+      a
+        color: #FFFFFF
+        display: inline-block
+        margin: 0 12px
+        text-decoration: none
+    .options
+      text-align: right
+      .github
+        color: #232a32
+        background-color: #7ED3B0
+        display: inline-block
+        text-align: center
+        font-size: 35px
+        border-radius: 50%
+        padding: 2px 3px 3px
+        width: 35px
+        height: 35px
+  .a-new-way
+    min-height: 50vh
+    padding: 24px 0
+    text-align: center
+    .box
+      .icons
+        padding: 48px
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+        background-image: url('/assets/header/icons.png')
+        @media #{$break-lt-md}
+          padding: 24px
+        img
+          width: 100%
+          height: auto
+          max-width: 300px
+          @media #{$break-lt-sm}
+            max-width: 200px
+      h1
+        margin: 0 auto
+        font-size: 35px
+        max-width: 700px
+        line-height: 50px
+        font-weight: 200
+        @media #{$break-lt-md}
+          font-size: 25px
+          padding: 0 24px 48px
+  .scroll-down
+    text-align: center
+    min-height: 100px
+    padding-top: 48px
+    @media #{$break-lt-md}
+      display: none
+    .text
+      text-transform: uppercase
+      font-size: 13px
+      padding-top: 12px
+      padding-bottom: 6px
+    .mouse
+      position: relative
+      display: block
+      margin: 0 auto
+      width: 24px
+      height: 40px
+      border: 2px solid #FFFFFF
+      border-radius: 25px
+      box-sizing: border-box
+    .mouse::before
+      position: absolute
+      top: 5px
+      left: 50%
+      content: ''
+      width: 4px
+      height: 4px
+      margin-left: -2px
+      background-color: #FFFFFF
+      border-radius: 100%
+      animation: scrolling-down 1.5s infinite
+      box-sizing: border-box
+    @keyframes scrolling-down
+      0%
+        transform: translate(0, 0)
+        opacity: 0
+      40%
+        opacity: 1
+      80%
+        transform: translate(0, 15px)
+        opacity: 0
+      100%
+        opacity: 0

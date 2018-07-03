@@ -1,0 +1,16 @@
+$container-max-width: 1000px
+
+$break-lt-md: 'screen and (max-width: 959px)'
+$break-lt-sm: 'screen and (max-width: 599px)'
+/* theme */
+
+@import '~@angular/material/theming'
+@include mat-core()
+
+$dark-primary: mat-palette($mat-yellow)
+$dark-accent: mat-palette($mat-amber, A400, A100, A700)
+$dark-warn: mat-palette($mat-red)
+
+$my-little-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn)
+$foreground: map-get($my-little-theme, foreground)
+$background: map-get($my-little-theme, background)

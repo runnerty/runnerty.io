@@ -1,0 +1,21 @@
+<div class="planet">
+  <img src="assets/news/planet.svg">
+</div>
+
+<div class="top">
+  <h1>Get Inspired by the community.</h1>
+  <p>Know how they are using Runnerty.</p>
+  <a href="https://medium.com/runnerty/" class="read-more" target="_blank">Read more</a>    
+</div>
+
+<section class="news" fxFlex fxLayout="row wrap" fxLayoutAlign="center start">
+  <article *ngFor="let post of news">
+    <a [href]="post.url" target="_blank">
+      <div class="image" [style.background-image]="'url(' + post.image + ')'"></div>
+      <div class="card-bottom">
+        <div class="site">{{post.site}}</div>
+        <div class="title">{{post.title}}</div>
+      </div>    
+    </a>
+  </article>
+</section>

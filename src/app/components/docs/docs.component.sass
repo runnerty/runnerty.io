@@ -1,0 +1,63 @@
+@import '../../../variables'
+\:host
+  display: block
+  color: #949496
+  background-color: #FFFFFF
+  padding: 96px 0 0
+  overflow: hidden
+  @media #{$break-lt-md}
+    padding-top: 48px
+  .centered
+    z-index: 10
+    text-align: center  
+    @media #{$break-lt-md}
+      text-align: left
+  .right
+    z-index: 10
+    text-align: left
+    padding-top: 70px
+    @media screen and (min-width: 1234px)
+      padding-left: 25px
+      margin-right: -25%
+    @media #{$break-lt-md}
+      padding-top: 0
+    .read-docs
+      display: block
+      width: 100%
+      max-width: 175px
+      text-align: center
+      border-radius: 48px
+      color: #FFFFFF
+      text-decoration: none
+      padding: 18px 0
+      background-color: #000000
+      margin: 0 auto 0 0
+      @media #{$break-lt-md}
+        margin: 0 auto
+  .text
+    p
+      margin: 0
+      padding-bottom: 48px
+    h2
+      text-align: center
+      font-family: 'Roboto', sans-serif
+      font-weight: 500
+      color: #404143
+      margin: 0
+      font-size: 40px
+      padding-bottom: 48px
+    h3
+      font-family: 'Roboto', sans-serif
+      font-weight: 500
+      color: #404143
+      margin: 0
+      font-size: 30px
+      padding-bottom: 24px
+  .book
+    z-index: 1
+    display: block
+    width: 235%
+    margin: -25% -35% 0 -100%
+    user-select: none
+    @media #{$break-lt-md}
+      display: none

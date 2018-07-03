@@ -1,0 +1,1 @@
+console.log('cookie script loaded! replace with google analytics stuff!');

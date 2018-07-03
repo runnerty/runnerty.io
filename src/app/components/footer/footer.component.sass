@@ -1,0 +1,44 @@
+@import '../../../variables'
+\:host
+  background-color: #202930
+  display: block
+  padding: 48px 24px 48px 34px
+.links
+  @media #{$break-lt-md}
+    margin-bottom: 48px
+  a 
+    color: #FFFFFF
+    text-decoration: none
+    margin: 0 24px
+    @media #{$break-lt-md}
+      display: block
+      width: 100%
+      margin: 6px 0
+      text-align: center
+    &:hover
+      color: #FFFFFF
+      text-decoration: none
+.social
+  text-align: right
+  font-size: 25px
+  width: 150px
+  @media #{$break-lt-md}
+    text-align: center
+    font-size: 30px
+    width: 100%
+    margin-bottom: 48px
+  a 
+    color: #FFFFFF
+    text-decoration: none
+    margin-left: 12px
+    @media #{$break-lt-md}
+      margin: 0 6px
+    &:hover
+      color: #FFFFFF
+      text-decoration: none
+img 
+  max-width: 50px
+  filter: brightness(10)
+  margin: 0 24px
+  @media #{$break-lt-md}
+    margin-bottom: 48px
