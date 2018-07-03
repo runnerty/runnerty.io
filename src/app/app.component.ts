@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppService } from './app.service';
 import { Meta, Title } from '@angular/platform-browser';
-/* import { NgcCookieConsentService } from 'ngx-cookieconsent'; */
+import { NgcCookieConsentService } from 'ngx-cookieconsent';
 import { Subscription } from 'rxjs';
 import { CookieService } from 'angular2-cookie/core';
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     private cookieService: CookieService,
-    /* private cookieConsent: NgcCookieConsentService, */
+    private cookieConsent: NgcCookieConsentService,
     private appService: AppService,
     private meta: Meta,
     private title: Title
@@ -49,9 +49,9 @@ export class AppComponent implements OnInit, OnDestroy {
       }
     ];
     this.checkCookies();
-    /* this.popupCloseSubscription = this.cookieConsent.popupClose$.subscribe(() => {
+    this.popupCloseSubscription = this.cookieConsent.popupClose$.subscribe(() => {
       this.checkCookies();
-    }); */
+    });
   }
 
   ngOnDestroy() {
