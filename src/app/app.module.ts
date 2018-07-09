@@ -48,6 +48,8 @@ import { QuickstartComponent } from './components/quickstart/quickstart.componen
 import { HelpComponent } from './components/help/help.component';
 import { NewsComponent } from './components/news/news.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -96,7 +98,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
