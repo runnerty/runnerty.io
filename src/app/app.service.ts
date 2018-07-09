@@ -39,7 +39,7 @@ export class AppService {
         },
         {
           name: 'keywords',
-          content: 'angular seo, angular 5 universal, nelacantinela'
+          content: 'taskrunner, angular, seo, angular6, universal'
         },
         {
           name: 'description',

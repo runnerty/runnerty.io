@@ -13,7 +13,7 @@ app.get('**', (req, res) => {
   const url = req.url;
   renderModuleFactory(AppServerModuleNgFactory, { document, url }).then(
     html => {
-      res.set('Cache-Control', 'public, max-age=600, s-maxage=1200');
+      res.set('Cache-Control', 'public, max-age=6000, s-maxage=1200');
       res.send(html);
     }
   );
