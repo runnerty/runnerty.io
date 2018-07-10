@@ -3,7 +3,7 @@
   "short_name": "Runnerty",
   "display": "standalone",
   "background_color": "#202930",
-  "theme-color": "#202930",
+  "theme_color": "#202930",
   "icons": [
     {
       "src": "/android-icon-36x36.png",
