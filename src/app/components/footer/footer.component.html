@@ -1,17 +1,18 @@
 <div fxFlex fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign="start center">
-  <div class="links"  fxFlex fxLayout="row wrap" fxFlexOrder="1" fxFlexOrder.lt-md="2">
+  <div class="links" fxLayout="row wrap" fxFlexOrder="1" fxFlexOrder.lt-md="2">
     <a *ngFor="let link of menu" [href]="link.href" target="_blank">{{link.title}}</a>
   </div>
   <div class="social" fxFlexOrder="2" fxFlexOrder.lt-md="3">
-    <a href="https://github.com/runnerty" target="_blank">
+    <a href="https://github.com/runnerty" target="_blank" rel="noopener" aria-label="link to github">
       <i class="fab fa-github"></i>
     </a>
-    <a href="https://twitter.com/runnerty_io" target="_blank">
+    <a href="https://twitter.com/runnerty_io" target="_blank" rel="noopener" aria-label="link to twitter">
       <i class="fab fa-twitter"></i>
     </a>
-    <a href="https://join.slack.com/t/runnerty/shared_invite/enQtMTgxNDQ2NTk2NTk3LTkyZGQ2YWRiMGM0YWQzNGMyOTdkNDE4OTIyNzM2NTJhZDMyYTAwZjM4NDYyZTE4YzAxOTRkYjJhOTJjYjI0ODQ" target="_blank">
+    <a href="https://join.slack.com/t/runnerty/shared_invite/enQtMTgxNDQ2NTk2NTk3LTkyZGQ2YWRiMGM0YWQzNGMyOTdkNDE4OTIyNzM2NTJhZDMyYTAwZjM4NDYyZTE4YzAxOTRkYjJhOTJjYjI0ODQ"
+      target="_blank" rel="noopener" aria-label="link to slack">
       <i class="fab fa-slack"></i>
     </a>
   </div>
-  <img fxFlex fxFlexOrder="3" fxFlexOrder.lt-md="2" src="/assets/footer/trazo.png" alt="Runnerty"/>
+  <img fxFlexOrder="3" fxFlexOrder.lt-md="2" src="/assets/footer/trazo.png" alt="Runnerty" />
 </div>
