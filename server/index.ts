@@ -4,6 +4,10 @@ import * as express from 'express';
 import { renderModuleFactory } from '@angular/platform-server';
 import * as fs from 'fs';
 
+import { enableProdMode } from '@angular/core';
+
+enableProdMode();
+
 const document = fs.readFileSync(__dirname + '/ssrtest/index-1.html', 'utf8');
 const AppServerModuleNgFactory = require(__dirname + '/ssrtest-server/main')
   .AppServerModuleNgFactory;

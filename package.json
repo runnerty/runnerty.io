@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "tsc:server": "tsc -p server/tsconfig.ssr.json",
-    "build:universal": "ng build --prod && ng run ssrtest:server && mv dist/ssrtest/index.html dist/ssrtest/index-1.html",
+    "build:universal": "ng build --prod && ng run ssrtest:server:production && mv dist/ssrtest/index.html dist/ssrtest/index-1.html",
     "serve:firebase": "firebase serve --only functions,hosting"
   },
   "private": true,

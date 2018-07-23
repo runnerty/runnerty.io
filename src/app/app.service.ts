@@ -47,19 +47,19 @@ export class AppService {
         },
         {
           name: 'copyright',
-          content: 'Runnerty'
+          content: 'Coderty'
         },
         {
           property: 'og:title',
           content: 'Runnerty'
         },
         {
-          property: 'og:description',
-          content: 'A new way to manage, plan and develop your processes and workflows.'
+          property: 'og:image',
+          content: 'https://runnerty.io/assets/header/logo-stroked.png'
         },
         {
-          property: 'og:image',
-          content: ''
+          property: 'og:description',
+          content: 'A new way to manage, plan and develop your processes and workflows.'
         },
         {
           property: 'og:url',
@@ -68,6 +68,23 @@ export class AppService {
         {
           property: 'og:site_name',
           content: 'runnerty.io'
+        },
+        {
+          name: 'twitter:title',
+          content: 'Runnerty'
+        },
+        {
+          name: 'twitter:description',
+          content:
+            'A new way to manage, plan and develop your processes and workflows.'
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://runnerty.io/assets/icons/twitter.png'
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image'
         }
       ]
     };
