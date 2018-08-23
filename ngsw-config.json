@@ -20,5 +20,21 @@
         "/assets/**"
       ]
     }
+  },
+  {
+    "name": "externals",
+    "installMode": "prefetch",
+    "updateMode": "prefetch",
+    "resources": {
+      "urls": ["https://fonts.googleapis.com/**"]
+    }
+  },
+  {
+    "name": "images",
+    "installMode": "prefetch",
+    "updateMode": "prefetch",
+    "resources": {
+      "urls": ["https://runnerty.io/assets/**"]
+    }
   }]
 }
