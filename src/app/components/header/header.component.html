@@ -1,54 +1,45 @@
 <nav>
-  <mat-toolbar flex
-    fxLayout="row">
-    <div flex
-      fxLayout="row"
-      fxFlex="0 0 20%"
-      fxFlex.lt-md="0 0 50%">
-      <button class="open-menu"
-        mat-icon-button
-        [matMenuTriggerFor]="rtymenu"
-        aria-label="open menu">
+  <mat-toolbar flex fxLayout="row">
+    <div flex fxLayout="row" fxFlex="0 0 20%" fxFlex.lt-md="0 0 50%">
+      <button class="open-menu" mat-icon-button [matMenuTriggerFor]="rtymenu" aria-label="open menu">
         <i class="fas fa-bars"></i>
       </button>
       <mat-menu #rtymenu="matMenu">
-        <a *ngFor="let link of menu"
+        <a
+          *ngFor="let link of menu"
           mat-menu-item
           [href]="link.href"
           target="_blank"
           rel="noopener"
-          aria-label="menu link">{{link.title}}</a>
+          aria-label="menu link"
+          >{{ link.title }}</a
+        >
       </mat-menu>
       <h1>Runnerty</h1>
     </div>
-    <div class="menu"
-      fxFlex="0 0 60%">
-      <a *ngFor="let link of menu"
-        [href]="link.href"
-        target="_blank"
-        rel="noopener"
-        aria-label="menu link">{{link.title}}</a>
+    <div class="menu" fxFlex="0 0 60%">
+      <a *ngFor="let link of menu" [href]="link.href" target="_blank" rel="noopener" aria-label="menu link">{{
+        link.title
+      }}</a>
     </div>
-    <div class="options"
-      fxFlex="0 0 20%"
-      fxFlex.lt-md="0 0 50%">
-      <a class="github"
+    <div class="options" fxFlex="0 0 20%" fxFlex.lt-md="0 0 50%">
+      <a
+        class="github"
         href="https://github.com/runnerty/runnerty"
         target="_blank"
         rel="noopener"
-        aria-label="github link">
+        aria-label="github link"
+      >
         <i class="fab fa-github"></i>
       </a>
     </div>
   </mat-toolbar>
 </nav>
 
-<div class="a-new-way"
-  fxLayoutAlign="center center">
+<div class="a-new-way" fxLayoutAlign="center center">
   <div class="box">
     <div class="icons">
-      <img src="/assets/header/logo-stroked.png"
-        alt="Runnerty" />
+      <img src="/assets/header/logo-stroked.png" alt="Runnerty" />
     </div>
     <h1>The new way to manage, plan and develop your processes and workflows</h1>
   </div>

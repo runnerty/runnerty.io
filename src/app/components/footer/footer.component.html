@@ -1,6 +1,6 @@
 <div fxFlex fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign="start center">
   <div class="links" fxLayout="row wrap" fxFlexOrder="1" fxFlexOrder.lt-md="2">
-    <a *ngFor="let link of menu" [href]="link.href" target="_blank">{{link.title}}</a>
+    <a *ngFor="let link of menu" [href]="link.href" target="_blank" rel="noopener">{{link.title}}</a>
   </div>
   <div class="social" fxFlexOrder="2" fxFlexOrder.lt-md="3">
     <a href="https://github.com/runnerty" target="_blank" rel="noopener" aria-label="link to github">
