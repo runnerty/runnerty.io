@@ -23,8 +23,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets", "src/robots.txt", "src/manifest.json"],
-            "styles": ["src/styles.sass"],
-            "scripts": []
+            "styles": ["src/styles.sass", "node_modules/cookieconsent/build/cookieconsent.min.css"],
+            "scripts": ["node_modules/cookieconsent/build/cookieconsent.min.js"]
           },
           "configurations": {
             "production": {

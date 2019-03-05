@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppService } from './app.service';
 import { Meta, Title } from '@angular/platform-browser';
+import { NgcCookieConsentService } from 'ngx-cookieconsent';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,11 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnInit {
-
   constructor(
     private appService: AppService,
     private meta: Meta,
-    private title: Title
+    private title: Title,
+    private ccService: NgcCookieConsentService
   ) {}
 
   data;

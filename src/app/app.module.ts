@@ -50,6 +50,30 @@ import { NewsComponent } from './components/news/news.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+
+const cookieConfig: NgcCookieConsentConfig = {
+  cookie: {
+    domain: 'runnerty.io'
+  },
+  palette: {
+    popup: {
+      background: '#000'
+    },
+    button: {
+      background: '#f1d600'
+    }
+  },
+  theme: 'edgeless',
+  type: 'info',
+  content: {
+    "message": "We use cookies, but not the dangerous ones",
+    dismiss: 'OK!',
+    deny: 'Refuse cookies',
+    link: 'Learn more',
+    href: 'https://cookiesandyou.com'
+  }
+};
 
 @NgModule({
   declarations: [
@@ -99,7 +123,8 @@ import { environment } from '../environments/environment';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
