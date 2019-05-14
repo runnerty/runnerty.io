@@ -24,7 +24,8 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets", "src/robots.txt", "src/manifest.json"],
             "styles": ["src/styles.sass", "node_modules/cookieconsent/build/cookieconsent.min.css"],
-            "scripts": ["node_modules/cookieconsent/build/cookieconsent.min.js"]
+            "scripts": ["node_modules/cookieconsent/build/cookieconsent.min.js"],
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
@@ -97,7 +98,8 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
-              ]
+              ],
+              "sourceMap": false
             }
           }
         }
