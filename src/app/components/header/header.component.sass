@@ -6,7 +6,9 @@
   background-repeat: no-repeat
   background-size: cover
   background-position: center center
-  background-image: url('/assets/header/bg.jpg')
+  background-image: url('/assets/header/bg-900.jpg')
+  @media #{$break-lt-md}
+    background-image: url('/assets/header/bg-700.jpg')
   nav
     mat-toolbar
       width: 100%

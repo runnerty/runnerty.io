@@ -11,19 +11,19 @@ export class AppService {
       {
         title: 'Build a Twitter bot with Runnerty in 5 min',
         site: 'Medium',
-        image: 'https://cdn-images-1.medium.com/max/800/1*DBmICuc7vTNe7u7YWilL9Q.jpeg',
+        image: 'assets/news/articles/article3.jpg',
         url: 'https://medium.com/runnerty/build-a-twitter-bot-with-runnerty-in-less-than-5-minutes-2ea45fe87ca1'
       },
       {
         title: 'Introducing Runnerty',
         site: 'Medium',
-        image: 'https://cdn-images-1.medium.com/max/800/1*mTuBaRbtMt8DbBZ9YxQaCA.jpeg',
+        image: 'assets/news/articles/article1.jpg',
         url: 'https://medium.com/runnerty/introducing-runnerty-1284c3e5d1b1'
       },
       {
         title: 'Why use Runnerty?',
         site: 'Medium',
-        image: 'https://cdn-images-1.medium.com/max/800/1*3xKYwTWsKcIpE2EWyZj5sQ.png',
+        image: 'assets/news/articles/article2.jpg',
         url: 'https://medium.com/runnerty/why-use-runnerty-dfa1af208977'
       }
     ];
