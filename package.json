@@ -10,7 +10,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "tsc:server": "tsc -p server/tsconfig.ssr.json",
-    "build:universal": "ng build --prod && ng run ssrtest:server:production && mv dist/ssrtest/index.html dist/ssrtest/index-1.html",
+    "build:universal": "ng build --prod && ng run ssrtest:server:production",
+    "tsc:prerender": "tsc -p prerender/tsconfig.ssr.json",
+    "prerender": "node dist/prerender",
     "serve:firebase": "firebase serve --only functions,hosting"
   },
   "private": true,
@@ -49,6 +51,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "html-minifier": "^4.0.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
