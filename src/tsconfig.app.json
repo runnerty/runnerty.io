@@ -3,7 +3,14 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "paths": {
+      "core-js/es7/reflect": ["node_modules/core-js/proposals/reflect-metadata"],
+      "core-js/es6/*": ["node_modules/core-js/es/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true
   },
   "exclude": [
     "src/test.ts",
