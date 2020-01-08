@@ -17,7 +17,8 @@
             "value": "max-age=5184000"
           }
         ]
-      },{
+      },
+      {
         "source": "**/*.@(js|css)",
         "headers": [
           {

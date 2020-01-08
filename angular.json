@@ -23,7 +23,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets", "src/robots.txt", "src/manifest.json"],
-            "styles": ["src/styles.sass", "node_modules/cookieconsent/build/cookieconsent.min.css"],
+            "styles": ["src/styles.scss", "node_modules/cookieconsent/build/cookieconsent.min.css"],
             "scripts": ["node_modules/cookieconsent/build/cookieconsent.min.js"],
             "es5BrowserSupport": true
           },
@@ -72,7 +72,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": ["styles.sass"],
+            "styles": ["styles.scss"],
             "scripts": [],
             "assets": ["src/favicon.ico", "src/assets", "src/robots.txt", "src/manifest.json"]
           }

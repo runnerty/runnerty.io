@@ -1,12 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { RunnertyMenuLink } from '../../runnerty.interfaces';
 
 @Component({
   selector: 'rty-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.sass']
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  @Input() menu;
+  @Input() menu: RunnertyMenuLink[];
 
   constructor() {}
 }
