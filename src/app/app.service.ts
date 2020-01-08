@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { RunnertyData, RunnertyNews } from './runnerty.interfaces';
 
 @Injectable()
 export class AppService {
   constructor(private http: HttpClient) {}
-  
-  getNews() {
+
+  getNews(): RunnertyNews[] {
     //return this.http.get('https://medium.com/runnerty/latest?format=json', {responseType: 'text'});
     return [
       {
@@ -29,7 +30,7 @@ export class AppService {
     ];
   }
 
-  getData() {
+  getData(): RunnertyData {
     return {
       title: 'Runnerty',
       meta: [
@@ -75,8 +76,7 @@ export class AppService {
         },
         {
           name: 'twitter:description',
-          content:
-            'A new way to manage, plan and develop your processes and workflows.'
+          content: 'A new way to manage, plan and develop your processes and workflows.'
         },
         {
           name: 'twitter:image',
