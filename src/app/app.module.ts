@@ -1,45 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule
-} from '@angular/material';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { AppService } from './app.service';
 
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { InstallComponent } from './components/install/install.component';
@@ -48,9 +20,6 @@ import { QuickstartComponent } from './components/quickstart/quickstart.componen
 import { HelpComponent } from './components/help/help.component';
 import { NewsComponent } from './components/news/news.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -67,7 +36,7 @@ const cookieConfig: NgcCookieConsentConfig = {
   theme: 'edgeless',
   type: 'info',
   content: {
-    "message": "We use cookies, but not the dangerous ones",
+    message: 'We use cookies, but not the dangerous ones',
     dismiss: 'OK!',
     deny: 'Refuse cookies',
     link: 'Learn more',
@@ -87,46 +56,19 @@ const cookieConfig: NgcCookieConsentConfig = {
     FooterComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FlexLayoutModule,
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
     MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatStepperModule,
-    MatTableModule,
-    MatTabsModule,
+    MatIconModule,
+    MatCardModule,
     MatToolbarModule,
-    MatTooltipModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    MatButtonModule,
     NgcCookieConsentModule.forRoot(cookieConfig)
   ],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

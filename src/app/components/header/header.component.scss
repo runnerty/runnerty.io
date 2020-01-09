@@ -7,10 +7,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url('/assets/header/bg-900.jpg');
+  background-image: url('/assets/images/header/bg-900.jpg');
 
   @media ($break-lt-md) {
-    background-image: url('/assets/header/bg-700.jpg');
+    background-image: url('/assets/images/header/bg-700.jpg');
   }
 
   nav {
@@ -99,7 +99,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center center;
-        background-image: url('/assets/header/icons.png');
+        background-image: url('/assets/images/header/icons.png');
 
         @media ($break-lt-md) {
           padding: 24px;

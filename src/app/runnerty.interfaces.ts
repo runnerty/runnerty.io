@@ -7,7 +7,7 @@ export interface RunnertyNews {
   url: string;
 }
 
-export interface RunnertyData {
+export interface RunnertyMeta {
   title: string;
   meta: MetaDefinition[];
 }

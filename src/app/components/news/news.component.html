@@ -1,21 +1,23 @@
 <div class="planet">
-  <img src="assets/news/planet.svg" alt="Planet">
+  <img src="assets/images/news/planet.svg" alt="Planet" />
 </div>
 
 <div class="top">
   <h1>Get Inspired by the community.</h1>
   <p>Know how they are using Runnerty.</p>
-  <a href="https://medium.com/runnerty/" class="read-more" target="_blank" rel="noopener" aria-label="link to Medium">Read more</a>    
+  <a href="https://medium.com/runnerty/" class="read-more" target="_blank" rel="noopener" aria-label="link to Medium"
+    >Read more</a
+  >
 </div>
 
-<section class="news"  fxLayout="row wrap" fxLayoutAlign="center start">
+<section class="news" fxLayout="row wrap" fxLayoutAlign="center start">
   <article *ngFor="let post of news">
     <a [href]="post.url" target="_blank" rel="noopener" aria-label="link to post">
       <div class="image" [style.background-image]="'url(' + post.image + ')'"></div>
       <div class="card-bottom">
-        <div class="site">{{post.site}}</div>
-        <div class="title">{{post.title}}</div>
-      </div>    
+        <div class="site">{{ post.site }}</div>
+        <div class="title">{{ post.title }}</div>
+      </div>
     </a>
   </article>
 </section>
