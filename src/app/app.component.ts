@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Meta, Title, DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
+import { NgcCookieConsentService } from 'ngx-cookieconsent';
 
 import { RunnertyMeta, RunnertyNews, RunnertyMenuLink } from './runnerty.interfaces';
 import { SeoService } from './services/seo.service';
@@ -22,7 +23,8 @@ export class AppComponent {
     private meta: Meta,
     private title: Title,
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private ccService: NgcCookieConsentService
   ) {}
 
   ngOnInit() {
