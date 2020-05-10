@@ -1,16 +1,20 @@
 <div class="container">
   <h1>Hands on!</h1>
-  <p>To start using runnerty, download the quick start repo and start building your own workflows.</p>
+  <p>To start using runnerty, use the cli and start building your own workflows.</p>
   <mat-card class="mat-elevation-z10">
     <mat-card-content class="fake-code">
-      <div class="fake-comment"># Clone this repository</div>
-      <div class="fake-command">git clone https://github.com/runnerty/runnerty-quick-start</div>
+      <div class="fake-comment"># Install the cli globally</div>
+      <div class="fake-command">npm i -g runnerty-cli</div>
+      <div class="fake-comment"># And create your first Runnerty project</div>
+      <div class="fake-command">rty new my-workflow</div>
+      <div class="fake-comment"># Alternatively, you can use npx </div>
+      <div class="fake-command">npx runnerty-cli new my-workflow</div>
       <div class="fake-comment"># Go into the repository</div>
-      <div class="fake-command">cd runnerty-quick-start</div>
+      <div class="fake-command">cd my-workflow</div>
       <div class="fake-comment"># Install dependencies</div>
       <div class="fake-command">npm install</div>
       <div class="fake-comment"># Run the example</div>
-      <div class="fake-command">runnerty</div>
+      <div class="fake-command">npm start</div>
     </mat-card-content>
   </mat-card>
 </div>
