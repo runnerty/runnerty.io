@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppService } from './app.service';
+import { AnalyticsService } from './shared/services/analytics.service';
 import { Meta, Title, DomSanitizer } from '@angular/platform-browser';
 import { RunnertyData, RunnertyNews, RunnertyMenuLink } from './runnerty.interfaces';
 import { MatIconRegistry } from '@angular/material';
@@ -19,7 +20,8 @@ export class AppComponent implements OnInit {
     private meta: Meta,
     private title: Title,
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private analyticsService: AnalyticsService
   ) {}
 
   ngOnInit() {
@@ -50,8 +52,18 @@ export class AppComponent implements OnInit {
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../assets/footer/slack.svg')
     );
     this.matIconRegistry.addSvgIcon(
+      'mail',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../assets/footer/mail_outline.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
       'twitter',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../assets/footer/twitter.svg')
     );
+  }
+
+  initializeAnalytics(){
+    this.analyticsService.startTrackerWithId('UA-61344582-9');
+
+    this.analyticsService.trackView('home', this.title.getTitle());
   }
 }

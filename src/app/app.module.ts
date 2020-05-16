@@ -38,6 +38,7 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AnalyticsService } from './shared/services/analytics.service';
 import { AppService } from './app.service';
 
 import { AppComponent } from './app.component';
@@ -126,7 +127,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     NgcCookieConsentModule.forRoot(cookieConfig)
   ],
-  providers: [AppService],
+  providers: [AppService, AnalyticsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

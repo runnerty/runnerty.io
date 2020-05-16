@@ -5,7 +5,10 @@
         <a *ngFor="let link of menu" [href]="link.href" target="_blank" rel="noopener">{{ link.title }}</a>
       </div>
     </div>
-    <div class="social" fxFlexOrder="2" fxFlexOrder.lt-md="3">
+    <div class="social" fxFlexOrder="2" fxFlexOrder.lt-md="4">
+      <a href="mailto:hello@runnerty.io" aria-label="link to mail">
+        <mat-icon svgIcon="mail"></mat-icon>
+      </a>
       <a href="https://github.com/runnerty" target="_blank" rel="noopener" aria-label="link to github">
         <mat-icon svgIcon="github"></mat-icon>
       </a>
