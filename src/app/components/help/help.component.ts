@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AnalyticsService } from '../../shared/services/analytics.service';
 
 @Component({
   selector: 'rty-help',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./help.component.scss']
 })
 export class HelpComponent {
-  constructor() {}
+  constructor(
+    private analyticsService: AnalyticsService
+  ) {}
+
+  onMenuNav(title){
+    this.analyticsService.trackEvent('click', title)
+  }
 }

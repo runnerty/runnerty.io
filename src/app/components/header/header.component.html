@@ -18,7 +18,7 @@
       <h1>Runnerty</h1>
     </div>
     <div class="menu" fxFlex="0 0 60%">
-      <a *ngFor="let link of menu" [href]="link.href" target="_blank" rel="noopener" aria-label="menu link">{{
+      <a *ngFor="let link of menu" [href]="link.href" target="_blank" rel="noopener" aria-label="menu link" (click)="onMenuNav(link.title)">{{
         link.title
       }}</a>
     </div>
@@ -29,6 +29,7 @@
         target="_blank"
         rel="noopener"
         aria-label="github link"
+        (click)="onMenuNav('github')"
       >
         <mat-icon svgIcon="github"></mat-icon>
       </a>

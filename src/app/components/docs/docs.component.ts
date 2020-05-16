@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AnalyticsService } from '../../shared/services/analytics.service';
 
 @Component({
   selector: 'rty-docs',
@@ -6,5 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./docs.component.scss']
 })
 export class DocsComponent {
-  constructor() {}
+  constructor(
+    private analyticsService: AnalyticsService
+  ) {}
+  
+  onMenuNav(title){
+    this.analyticsService.trackEvent('click', title)
+  }
 }

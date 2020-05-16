@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AnalyticsService } from '../../shared/services/analytics.service';
 
 @Component({
   selector: 'rty-install',
@@ -6,5 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./install.component.sass']
 })
 export class InstallComponent {
-  constructor() {}
+  constructor(
+    private analyticsService: AnalyticsService
+  ) {}
+
+  onMenuNav(title){
+    this.analyticsService.trackEvent('click', title)
+  }
 }
