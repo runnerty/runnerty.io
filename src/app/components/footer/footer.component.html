@@ -5,11 +5,14 @@
         <a *ngFor="let link of menu" [href]="link.href" target="_blank" rel="noopener">{{ link.title }}</a>
       </div>
     </div>
-    <div class="social" fxFlexOrder="2" fxFlexOrder.lt-md="3">
-      <a href="https://github.com/runnerty" target="_blank" rel="noopener" aria-label="link to github">
+    <div class="social" fxFlexOrder="2" fxFlexOrder.lt-md="4">
+      <a href="mailto:hello@runnerty.io" (click)="onMenuNav('mail')" aria-label="link to mail">
+        <mat-icon svgIcon="mail"></mat-icon>
+      </a>
+      <a href="https://github.com/runnerty" target="_blank" rel="noopener" (click)="onMenuNav('github')" aria-label="link to github">
         <mat-icon svgIcon="github"></mat-icon>
       </a>
-      <a href="https://twitter.com/runnerty_io" target="_blank" rel="noopener" aria-label="link to twitter">
+      <a href="https://twitter.com/runnerty_io" target="_blank" rel="noopener" (click)="onMenuNav('twitter')" aria-label="link to twitter">
         <mat-icon svgIcon="twitter"></mat-icon>
       </a>
       <a
@@ -17,6 +20,7 @@
         target="_blank"
         rel="noopener"
         aria-label="link to slack"
+        (click)="onMenuNav('slack')"
       >
         <mat-icon svgIcon="slack"></mat-icon>
       </a>
@@ -27,7 +31,7 @@
 
 <div class="copyright">
   <span
-    >Powered by <a href="https://coderty.com" target="_blank">Coderty</a> © 2017-2020. Released under the MIT
+    >Powered by <a (click)="onMenuNav('coderty')" href="https://coderty.com" target="_blank">Coderty</a> © 2017-2020. Released under the MIT
     License.</span
   >
 </div>

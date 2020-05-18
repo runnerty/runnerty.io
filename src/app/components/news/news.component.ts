@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AnalyticsService } from '../../shared/services/analytics.service';
 
 @Component({
   selector: 'rty-news',
@@ -7,5 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class NewsComponent {
   @Input() news;
-  constructor() {}
+  constructor(
+    private analyticsService: AnalyticsService
+  ) {}
+
+  onMenuNav(title){
+    this.analyticsService.trackEvent('click', title)
+  }
 }

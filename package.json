@@ -32,6 +32,7 @@
     "@angular/pwa": "^0.901.5",
     "@angular/service-worker": "^7.2.7",
     "@nguniversal/express-engine": "^7.1.0",
+    "@types/google.analytics": "0.0.40",
     "cookieconsent": "^3.1.0",
     "core-js": "2.5.4",
     "firebase-admin": "^8.12.1",

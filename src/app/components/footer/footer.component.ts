@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { RunnertyMenuLink } from '../../runnerty.interfaces';
+import { AnalyticsService } from '../../shared/services/analytics.service'
 
 @Component({
   selector: 'rty-footer',
@@ -9,5 +10,11 @@ import { RunnertyMenuLink } from '../../runnerty.interfaces';
 export class FooterComponent {
   @Input() menu: RunnertyMenuLink[];
 
-  constructor() {}
+  constructor(
+    private analyticsService: AnalyticsService
+  ) {}
+
+  onMenuNav(title){
+    this.analyticsService.trackEvent('click', title)
+  }
 }
