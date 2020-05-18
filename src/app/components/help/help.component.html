@@ -4,19 +4,24 @@
     <h3 fxFlex="0 0 100%">
       Follow runnerty on Twitter or join the official Slack channel to stay in touch with the latest updates.
     </h3>
-    <div class="link" fxFlex="0 0 50%" fxFlex.lt-md="0 0 100%">
+    <div class="link" fxFlex="0 0 33%" fxFlex.lt-md="0 0 100%">
+      <a (click)="onMenuNav('mail')" href="mailto:hello@runnerty.io" aria-label="twitter link">
+        <span>Email us</span> <mat-icon svgIcon="mail"></mat-icon>
+      </a>
+    </div>
+    <div class="link" fxFlex="0 0 33%" fxFlex.lt-md="0 0 100%">
       <a (click)="onMenuNav('slack')"
         href="https://join.slack.com/t/runnerty/shared_invite/enQtMTgxNDQ2NTk2NTk3LTg5Y2JjNzBlMTU3OGY5NDYxYjRiMmQ1Y2ZjNDVjMDk2NmM1MzNhZDYyOGZjOWZhNjFjZDE4MDYxODg0NGJkY2I"
         target="_blank"
         rel="noopener"
         aria-label="slack link"
       >
-        <span>Join us on Slack</span> <mat-icon svgIcon="slack"></mat-icon>
+        <span>Join our Slack</span> <mat-icon svgIcon="slack"></mat-icon>
       </a>
     </div>
-    <div class="link" fxFlex="0 0 50%" fxFlex.lt-md="0 0 100%">
+    <div class="link" fxFlex="0 0 33%" fxFlex.lt-md="0 0 100%">
       <a (click)="onMenuNav('twitter')" href="https://twitter.com/runnerty_io" target="_blank" rel="noopener" aria-label="twitter link">
-        <span>Follow us on Twitter</span> <mat-icon svgIcon="twitter"></mat-icon>
+        <span>Follow us</span> <mat-icon svgIcon="twitter"></mat-icon>
       </a>
     </div>
   </div>
