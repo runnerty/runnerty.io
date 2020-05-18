@@ -12,7 +12,7 @@
     "tsc:server": "tsc -p server/tsconfig.ssr.json",
     "build:universal": "ng build --prod && ng run ssrtest:server:production",
     "tsc:prerender": "tsc -p prerender/tsconfig.ssr.json",
-    "prerender": "node dist/prerender",
+    "prerender": "node dist/prerender && mv dist/ssrtest/index.html dist/ssrtest/_index.html && mv dist/ssrtest/prerender.html dist/ssrtest/index.html",
     "serve:firebase": "firebase serve --only functions,hosting"
   },
   "private": true,

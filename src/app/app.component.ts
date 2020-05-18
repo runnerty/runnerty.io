@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppService } from './app.service';
 import { AnalyticsService } from './shared/services/analytics.service';
 import { Meta, Title, DomSanitizer } from '@angular/platform-browser';
@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.initializeAnalytics();
     this.data = this.appService.getData();
     this.title.setTitle(this.data.title);
     this.meta.addTags(this.data.meta);
@@ -61,9 +62,8 @@ export class AppComponent implements OnInit {
     );
   }
 
-  initializeAnalytics(){
+  initializeAnalytics() {
     this.analyticsService.startTrackerWithId('UA-61344582-9');
-
     this.analyticsService.trackView('home', this.title.getTitle());
   }
 }
