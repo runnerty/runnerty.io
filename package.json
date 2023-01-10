@@ -41,7 +41,7 @@
     "ngx-cookieconsent": "^2.1.1",
     "node-sass": "^4.14.1",
     "rxjs": "6.4.0",
-    "ts-loader": "^4.3.0",
+    "ts-loader": "^6.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
